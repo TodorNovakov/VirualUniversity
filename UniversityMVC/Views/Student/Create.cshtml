@@ -1,0 +1,58 @@
+﻿@model UniversityMVC.ViewModel.StudentCourses
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Student</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Student.LastName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Student.LastName)
+                @Html.ValidationMessageFor(model => model.Student.LastName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Student.FirstName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Student.FirstName)
+                @Html.ValidationMessageFor(model => model.Student.FirstName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Course.IdCourse)
+        </div>
+        <div class="editor-field">
+            @*@Html.DropDownListFor(model => Model.Course.IdCourse, ViewBag.Courses as IEnumerable<SelectListItem>)*@
+            @Html.DropDownListFor(model => Model.Course.IdCourse, ViewBag.AllCourses as IEnumerable<SelectListItem>);
+            @Html.ValidationMessageFor(model => model.Course.IdCourse)
+
+         
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

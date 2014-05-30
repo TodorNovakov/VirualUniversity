@@ -1,0 +1,10 @@
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\bin\Debug\UniversityLibrary.dll.config
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\bin\Debug\UniversityLibrary.dll
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\bin\Debug\UniversityLibrary.pdb
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\bin\Debug\EntityFramework.dll
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\bin\Debug\EntityFramework.xml
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\obj\Debug\UniversityLibrary.csprojResolveAssemblyReference.cache
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\obj\Debug\UniversityLibrary.dll
+c:\users\todor.novakov\documents\visual studio 2013\Projects\VirtualUniversity\UniversityLibrary\obj\Debug\UniversityLibrary.pdb

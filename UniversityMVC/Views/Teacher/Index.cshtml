@@ -1,0 +1,47 @@
+﻿@model IEnumerable<UniversityLibrary.Teacher>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (@Html.BeginForm("Index", "Teacher"))
+{
+    <text>Sort By </text> @Html.RadioButton("sortBy", ViewBag.SortByName as string) <text>By Name </text>
+    @Html.RadioButton("sortBy", ViewBag.SortById as string)<text>By Id</text>
+     <input type="submit" value="Sort" class="btn btn-default" />
+}
+<h2>Teachers in University</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("Search", "Search")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdTeacher }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdTeacher }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdTeacher })
+        </td>
+    </tr>
+}
+
+</table>

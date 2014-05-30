@@ -1,0 +1,35 @@
+﻿@model UniversityLibrary.Teacher
+
+@using (@Html.BeginForm("Search", "Teacher", FormMethod.Get))
+{
+   <b>Search by</b>
+    @Html.RadioButton("searchBy",ViewBag.SearchById as string)<text>By Id</text>
+    @Html.RadioButton("searchBy",ViewBag.SearchByName as string)<text> By Name </text>
+                                                                
+    @Html.TextBox("search")
+    
+     <input type="submit" value="Search" class="btn btn-default" />
+}
+
+<div>
+    <h4>Teacher</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+    </dl>
+</div>

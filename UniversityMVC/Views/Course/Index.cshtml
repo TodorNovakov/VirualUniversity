@@ -1,0 +1,48 @@
+﻿@model IEnumerable<UniversityLibrary.Cours>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (@Html.BeginForm("Index", "Course", FormMethod.Get))
+{
+   @* <h2>Sort By</h2> @Html.RadioButton("sortBy",ViewBag.SortByName as string) <text>By Name </text>
+    @Html.RadioButton("sortBy",ViewBag.SortById as string) <text> By Id </text> *@
+    
+    @Html.DropDownList("sortBy",ViewBag.SortValues as IEnumerable<SelectListItem>)
+    <input type="submit" value="Sort" class="btn btn-default" />
+}
+<h2>Courses</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("Search","Search")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.LastName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Teacher.LastName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdCourse }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdCourse }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdCourse })
+        </td>
+    </tr>
+}
+
+</table>

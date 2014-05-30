@@ -1,0 +1,39 @@
+﻿@model UniversityLibrary.Cours
+
+
+@using (@Html.BeginForm("Search", "Course",FormMethod.Get))
+{
+    <text>Search by Name</text>
+    @Html.TextBox("searchName")<input type="submit" value="Search" />
+    
+
+}
+
+@if (Model == null)
+{
+    <h4>  No course </h4>
+}
+else
+{
+<div>
+    <h4>Cours</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Course")
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+
+        <dt>
+            @Html.Label("Teacher")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teacher.LastName)
+        </dd>
+
+    </dl>
+</div>
+}
